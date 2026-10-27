@@ -4,6 +4,14 @@ Source code for [hamson.tech](https://hamson.tech), the independent website of N
 
 The site presents my work in software engineering, Machine Intelligence, Bitcoin and related technical development.
 
+## Official HamTron intelligence projects
+
+**TRON — Technological Reasoning and Operational Network** is HamTron's private Machine Intelligence system. It is being developed to support internal operations, research, software engineering, reasoning, knowledge retention and management of HamTron's software projects. **Status: active private development.**
+
+**CLU — Cognitive Learning Utility** is HamTron's planned customer-facing commercial MI/AI assistant for individuals, businesses and organisations. It will be a separate product with its own customer-access, data and security boundaries. **Status: planned development; not yet a released product.**
+
+TRON and CLU are distinct: TRON is private and company-focused; CLU is intended for customers. Their expanded names are the approved project terminology. Planned capabilities are not claims of present functionality.
+
 ## Technology
 
 - Next.js App Router
@@ -20,7 +28,7 @@ The repository contains the source for the live hamson.tech website, including:
 
 - homepage and navigation
 - Machine Intelligence section
-- MI1 development presentation
+- TRON development presentation
 - public code-review demonstration interface
 - development record
 - Bitcoin material
@@ -30,13 +38,13 @@ The repository contains the source for the live hamson.tech website, including:
 - SEO, sitemap and robots configuration
 - responsive styling and branding assets
 
-## MI1
+## TRON
 
-MI1 is a private Machine Intelligence software system under active development.
+TRON is HamTron's private Technological Reasoning and Operational Network under active development.
 
 The website includes public-facing material explaining selected aspects of that work, including human-reviewed development, bounded tools, validation and controlled software changes.
 
-A complete controlled MI1 development cycle has been demonstrated on an external software repository:
+A complete controlled TRON development cycle has been demonstrated on an external software repository:
 
 1. inspect the repository and task
 2. prepare a bounded change proposal
@@ -45,9 +53,9 @@ A complete controlled MI1 development cycle has been demonstrated on an external
 5. run repository validation
 6. create a controlled local Git commit
 
-The MI1 core source code is not part of this repository.
+The TRON core source code is not part of this repository.
 
-A separate public evidence repository is being prepared for technical records, demonstrations and selected reproducible evidence without exposing the private MI1 implementation.
+A separate public evidence repository is being prepared for technical records, demonstrations and selected reproducible evidence without exposing the private TRON implementation.
 
 ## Development approach
 
@@ -64,7 +72,7 @@ The normal engineering workflow includes:
 7. deploy separately to production
 8. verify the live result
 
-MI1 is also being developed to participate in this workflow while retaining explicit human authority over consequential actions.
+TRON is also being developed to participate in this workflow while retaining explicit human authority over consequential actions.
 
 ## Repository purpose
 
@@ -72,7 +80,7 @@ This repository is public so that the implementation of hamson.tech and the prog
 
 It is not intended to expose:
 
-- MI1 private source code
+- TRON private source code
 - private evaluation or training data
 - API credentials
 - production server credentials
