@@ -5,6 +5,18 @@ const siteUrl = "https://hamson.tech";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
+      url: `${siteUrl}/half-echo`,
+      lastModified: "2026-11-01",
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
+      url: `${siteUrl}/anna`,
+      lastModified: "2026-11-01",
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
       url: siteUrl,
       lastModified: "2026-09-14",
       changeFrequency: "weekly",

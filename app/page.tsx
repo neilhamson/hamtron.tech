@@ -135,6 +135,12 @@ export default function Home() {
               className="closing-route-grid"
               aria-label="Hamson Software systems"
             >
+              <Link href="/half-echo">
+                <span>MUSIC / COMPANION DEVELOPMENT</span>
+                <strong>HALF ECHO &amp; ANNA</strong>
+                <small>EXPLORE →</small>
+              </Link>
+
               <a
                 href="https://wallet.hamson.tech"
                 target="_blank"

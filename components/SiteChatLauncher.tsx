@@ -29,6 +29,14 @@ const quickPrompts = productConfig.launcher.prompts;
 
 export default function SiteChatLauncher() {
   const pathname = usePathname();
+  if (pathname === "/anna" || pathname.startsWith("/anna/") || pathname === "/half-echo" || pathname.startsWith("/half-echo/")) {
+    return null;
+  }
+  return <TechnicalChatLauncher />;
+}
+
+function TechnicalChatLauncher() {
+  const pathname = usePathname();
   const bitcoinProductRoute = pathname.startsWith("/bitcoin");
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
