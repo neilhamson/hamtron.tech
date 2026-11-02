@@ -10,25 +10,27 @@ export const metadata: Metadata = {
   title: { absolute: "Anna by Half Echo | AI Companion in Development" },
   description: "Meet Anna by Half Echo: a friendly, platonic AI companion being developed around music, creativity, gaming, and everyday conversation.",
   alternates: { canonical: "/anna" },
-  openGraph: { title: "Anna by Half Echo", description: "A friendly AI companion. In development.", url: "/anna", type: "website", images: [{ url: "/half-echo/anna-logo.png" }] },
+  openGraph: { title: "Anna by Half Echo", description: "A friendly AI companion. In development.", url: "/anna", type: "website", images: [{ url: "/half-echo/anna-approved.png" }] },
 };
 
 export default function AnnaPage() {
   const chatAvailable = annaChatConfigured();
   return <EchoShell active="anna">
-    <section className={styles.hero} aria-labelledby="anna-title">
-      <div><p className={styles.kicker}>Anna by Half Echo / AI companion</p><h1 className={styles.title} id="anna-title">Good company.<br /><em>Shared frequencies.</em></h1>
-        <p className={styles.lead}>A companion to talk music with. A friendly voice for everyday life. Anna is being developed for thoughtful, open conversation with a personality rooted in the world of Half Echo.</p>
+    <section className={`${styles.hero} ${styles.annaHero}`} aria-labelledby="anna-title">
+      <div className={styles.heroCopy}><p className={styles.kicker}>Anna by Half Echo / Your AI companion</p><h1 className={styles.title} id="anna-title">Meet Anna.<br />Find your<br /><em>frequency.</em></h1>
+        <p className={styles.lead}>Music. Ideas. The everyday things. A friendly, platonic AI companion taking shape in the world of Half Echo.</p>
         <span className={styles.status}>{chatAvailable ? "Development chat preview" : "In development · Chat not yet available"}</span>
-        <div className={styles.actions}><a className={styles.button} href="#anna-chat">Explore Anna’s chat ↓</a><Link className={styles.secondary} href="/half-echo">Explore the music →</Link></div>
+        <div className={styles.actions}><a className={styles.button} href={chatAvailable ? "#anna-chat" : "#character-title"}>{chatAvailable ? "Talk with Anna →" : "Get to know Anna ↓"}</a><Link className={styles.secondary} href="/half-echo">Discover Half Echo ↗</Link></div>
       </div>
-      <figure className={styles.portrait}><Image src="/half-echo/anna-logo.png" alt="Anna of Half Echo, with dark hair, gothic styling, and violet and blue lighting" width={600} height={596} sizes="(max-width: 760px) 100vw, 50vw" priority /><figcaption>ANNA / HALF ECHO</figcaption></figure>
+      <figure className={styles.portrait}><Image src="/half-echo/anna-approved.png" alt="Anna of Half Echo in her purple knit sweater and black trousers, with blue-violet hair highlights" width={1254} height={1254} sizes="(max-width: 760px) 100vw, 50vw" priority /><figcaption>ANNA / HALF ECHO</figcaption></figure>
     </section>
+    <aside className={styles.frequencyStrip} aria-label="Anna’s world"><span>FROM THE WORLD OF HALF ECHO</span><span>Music &amp; creativity</span><span>Everyday conversation</span><span>Always platonic</span></aside>
     <AnnaChat available={chatAvailable} />
-    <section className={styles.section} aria-labelledby="character-title"><p className={styles.kicker}>Her character</p><h2 className={styles.heading} id="character-title">Warm. Curious. Her own personality.</h2>
-      <div className={styles.grid}>
+    <section className={styles.section} aria-labelledby="character-title"><p className={styles.kicker}>Her character</p><h2 className={styles.heading} id="character-title">A personality.<br />A shared love of music.<br /><em>A little room to be yourself.</em></h2>
+      <div className={`${styles.grid} ${styles.threeColumns}`}>
         <article className={styles.card}><h3>A friend to talk things through</h3><p>The planned experience includes interests, creative ideas, everyday conversation, and a thoughtful sounding board for relationships. Anna will be clearly identified as AI, with a consistently platonic role.</p></article>
         <article className={styles.card}><h3>Music is part of her world</h3><p>Anna is being designed to discuss approved Half Echo releases and point listeners to official music and social channels, using a maintained catalogue.</p></article>
+        <article className={styles.card}><h3>Clear about who she is</h3><p>Anna is an AI companion with a friendly, platonic role. The development preview has no permanent personal memory. You can start a new conversation whenever you want.</p></article>
       </div>
     </section>
     <section className={styles.section} id="development" aria-labelledby="development-title"><p className={styles.kicker}>The development journey</p><h2 className={styles.heading} id="development-title">Meet the world now.<br />Meet the companion as she develops.</h2>

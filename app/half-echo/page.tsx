@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 
 export default function HalfEchoPage() {
   return <EchoShell active="music">
+    <div className={styles.musicBanner} aria-label="Half Echo — dark melodic techno and cyberpunk soundscapes"><span className={styles.bannerLine} aria-hidden="true" /><strong>HALF<span>ECHO</span></strong><p>DARK MELODIC TECHNO / CYBERPUNK SOUNDSCAPES</p></div>
     <section className={styles.hero} aria-labelledby="music-title">
       <div><p className={styles.kicker}>Half Echo / Electronic music</p>
         <h1 className={styles.title} id="music-title">A world<br />between<br /><em>the signals.</em></h1>
@@ -29,7 +30,7 @@ export default function HalfEchoPage() {
       </div>
     </section>
     <section className={styles.hero} aria-labelledby="anna-intro-title">
-      <figure className={styles.portrait}><Image src="/half-echo/anna-logo.png" alt="Anna of Half Echo, with dark hair and gothic styling" width={600} height={596} sizes="(max-width: 760px) 100vw, 50vw" /><figcaption>ANNA / HALF ECHO</figcaption></figure>
+      <figure className={styles.portrait}><Image src="/half-echo/anna-approved.png" alt="Anna of Half Echo in her purple knit sweater and black trousers" width={1254} height={1254} sizes="(max-width: 760px) 100vw, 50vw" /><figcaption>ANNA / HALF ECHO</figcaption></figure>
       <div><span className={styles.status}>Anna / In development</span><h2 className={styles.heading} id="anna-intro-title">Meet Anna<br />by Half Echo.</h2><p className={styles.lead}>A friendly AI companion for conversations about music, gaming, creativity, and everyday life. Warm, curious, and always platonic.</p><div className={styles.actions}><Link className={styles.secondary} href="/anna">Explore Anna →</Link></div></div>
     </section>
   </EchoShell>;
