@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: { absolute: "Anna by Half Echo | AI Companion in Development" },
   description: "Meet Anna by Half Echo: a friendly, platonic AI companion being developed around music, creativity, gaming, and everyday conversation.",
   alternates: { canonical: "/anna" },
-  openGraph: { title: "Anna by Half Echo", description: "A friendly AI companion. In development.", url: "/anna", type: "website", images: [{ url: "/half-echo/doors-were-never-locked.webp" }] },
+  openGraph: { title: "Anna by Half Echo", description: "A friendly AI companion. In development.", url: "/anna", type: "website", images: [{ url: "/half-echo/anna-logo.png" }] },
 };
 
 export default function AnnaPage() {
@@ -19,7 +19,7 @@ export default function AnnaPage() {
         <span className={styles.status}>In development · Chat not yet available</span>
         <div className={styles.actions}><a className={styles.button} href="#development">Follow the development ↓</a><Link className={styles.secondary} href="/half-echo">Explore the music →</Link></div>
       </div>
-      <figure className={styles.art}><Image src="/half-echo/doors-were-never-locked.webp" alt="Anna visual reference from Half Echo artwork: dark hair, gothic styling, and violet and green cathedral lighting" width={797} height={782} sizes="(max-width: 760px) 100vw, 50vw" priority /><figcaption>ANNA / THE HALF ECHO VISUAL WORLD</figcaption></figure>
+      <figure className={styles.portrait}><Image src="/half-echo/anna-logo.png" alt="Anna of Half Echo, with dark hair, gothic styling, and violet and blue lighting" width={600} height={596} sizes="(max-width: 760px) 100vw, 50vw" priority /><figcaption>ANNA / HALF ECHO</figcaption></figure>
     </section>
     <section className={styles.section} aria-labelledby="character-title"><p className={styles.kicker}>Her character</p><h2 className={styles.heading} id="character-title">Warm. Curious. Her own personality.</h2>
       <div className={styles.grid}>

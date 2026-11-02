@@ -33,3 +33,7 @@
 .steps li { padding: 8px 0; }
 .footer { border-top: 1px solid #ffffff20; color: #bdb1c9; font-size: 13px; flex-wrap: wrap; }
 @media (max-width: 760px) { .nav, .footer { padding: 24px; flex-wrap: wrap; } .navLinks { gap: 20px; } .hero { grid-template-columns: 1fr; padding: 42px 24px; gap: 34px; } .section { padding: 42px 24px; } .grid { grid-template-columns: 1fr; } .lead { font-size: 18px; } .title { font-size: clamp(48px, 12vw, 76px); } }
+
+.portrait { margin: 0; min-width: 0; background: radial-gradient(ellipse at 50% 65%, #6b33962b, transparent 70%); }
+.portrait img { display: block; width: 100%; height: auto; object-fit: contain; }
+.portrait figcaption { margin-top: 14px; color: #bdb1c9; font-size: 12px; letter-spacing: .06em; text-align: center; }

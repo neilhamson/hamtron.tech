@@ -29,7 +29,7 @@ export default function HalfEchoPage() {
       </div>
     </section>
     <section className={styles.hero} aria-labelledby="anna-intro-title">
-      <figure className={styles.art}><Image src="/half-echo/doors-were-never-locked.webp" alt="Half Echo — The Doors Were Never Locked artwork, with a gothic musician and orchestra in a neon cathedral" width={797} height={782} sizes="(max-width: 760px) 100vw, 50vw" /><figcaption>THE DOORS WERE NEVER LOCKED / HALF ECHO</figcaption></figure>
+      <figure className={styles.portrait}><Image src="/half-echo/anna-logo.png" alt="Anna of Half Echo, with dark hair and gothic styling" width={600} height={596} sizes="(max-width: 760px) 100vw, 50vw" /><figcaption>ANNA / HALF ECHO</figcaption></figure>
       <div><span className={styles.status}>Anna / In development</span><h2 className={styles.heading} id="anna-intro-title">Meet Anna<br />by Half Echo.</h2><p className={styles.lead}>A friendly AI companion for conversations about music, gaming, creativity, and everyday life. Warm, curious, and always platonic.</p><div className={styles.actions}><Link className={styles.secondary} href="/anna">Explore Anna →</Link></div></div>
     </section>
   </EchoShell>;
