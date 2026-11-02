@@ -55,6 +55,12 @@
 .chat .secondary { background: transparent; color: #f8f3ff; }
 .chat button:disabled { opacity: .5; cursor: default; }
 .chatError { color: #ffc8cc; line-height: 1.6; }
+.tableScroll { overflow-x: auto; margin-top: 30px; }
+.planTable { border-collapse: collapse; width: 100%; min-width: 540px; text-align: left; }
+.planTable caption { text-align: left; color: #a7f7c1; padding: 16px 0; }
+.planTable th, .planTable td { padding: 18px 16px; border-bottom: 1px solid #ffffff25; line-height: 1.5; }
+.planTable thead { background: #17121f; }
+.planTable tbody th { font-weight: 400; color: #c9c0d4; }
 .annaHero { max-width: 1440px; min-height: min(830px, 90vh); grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: 10px; padding-top: 28px; padding-bottom: 28px; }
 .heroCopy { position: relative; z-index: 1; }
 .annaHero .title { font-size: clamp(64px, 7.8vw, 112px); }

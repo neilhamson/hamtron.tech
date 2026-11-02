@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   async redirects() {
     return [
+      { source: "/half-echo", destination: "/anna/half-echo", permanent: true },
       {
         source: "/machine-intelligence",
         destination: "/tron",

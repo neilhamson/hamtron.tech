@@ -1,44 +1,43 @@
-# Anna Bot — introduction pages
+# Anna Bot and the optional Half Echo package
 
-## Naming and routes
+## Product and pages
 
-- Half Echo is the music project and public music hub at `/half-echo`.
-- Anna Bot is a separate companion product at `/anna`; it is not a Half Echo product. Both projects are under the HAMTRON umbrella.
-- Anna is the conversational name; identify the service as an AI companion.
+Anna Bot is HamTron's companion software. Half Echo is a separate music enterprise, included in Anna's repertoire and optionally bundled with the companion subscription. Do not claim HamTron owns Half Echo. Do not publish private biography or personal relationships.
 
-## Implemented
+- `/anna`: primary product page, companion first.
+- `/anna#features`: companion and relationship conversation, identity and music repertoire.
+- `/anna/half-echo`: distinct Half Echo music subpage with its approved gothic portrait and official listening links.
+- `/anna/plans`: planned Anna Bot standalone and Anna Bot + Half Echo complete packages.
+- `/half-echo`: permanent redirect to `/anna/half-echo` for earlier links.
 
-Two linked introduction pages for separate HAMTRON projects, supplied original artwork, official YouTube channel and supplied video links, page metadata, sitemap entries, and a homepage discovery link. No third-party player or autoplay is loaded. The existing technical chatbot is not mounted on these routes.
+The website's main desktop/mobile menu points to Anna Bot. Product navigation is Meet Anna, Features, Half Echo and Plans. The Anna page retains the user-approved purple-sweater PNG unchanged. Half Echo retains its separately uploaded gothic artist PNG unchanged. Reference screenshots guide layout only.
 
-The supplied video has no confirmed catalogue title. Its link is deliberately labelled generically. The two artwork titles do not imply a verified mapping to that video. Additional social accounts must be confirmed before adding links.
+## Subscriptions
 
-## Development chat prototype
+Both planned subscriptions include Anna's companionship and knowledge of Half Echo. The complete package adds the music subscription package; it does not buy a different relationship with Anna. Music knowledge and music access rights are separate concepts. Prices, gated music content, access details and availability have not been confirmed. The plans page takes no payment or registration. No account, billing or entitlement enforcement is implemented.
 
-The `/anna` page now includes a chat component backed by a separate `/api/anna/chat` route. It is available only in development with all explicit settings present; production requests always return 503. Public pages show an unavailable-chat notice. Personal memory, accounts, beta registration, payments and subscriptions remain unimplemented. No release date is promised.
+## Companion behaviour and knowledge
 
-YoriBot's `develop` branch offers application patterns for reuse, but its deterministic engine does not provide the intended open-ended companion experience. This prototype uses the website's already-installed xAI adapter with a dedicated Anna key and an operator-selected model, without changing the existing technical assistant. This is an evaluation adapter, not a final provider or model decision.
+Companionship and thoughtful platonic relationship conversation take priority. Music is secondary: make occasional relevant recommendations in response to interest, respect declined suggestions, and do not interrupt distress or sensitive relationship conversations with unsolicited music or subscription promotions. Never exploit loneliness or make companionship conditional on buying music.
 
-For local evaluation only, set `ANNA_DEV_CHAT_ENABLED=true`, `ANNA_XAI_API_KEY` and `ANNA_MODEL` in the ignored `.env.local` file. Never commit actual keys. Run `npm run dev -- --hostname 127.0.0.1`; do not expose the development server publicly. No credentials were provisioned or paid model calls made during implementation. The provider may retain requests according to its own terms; clearing the local chat does not delete provider data.
+Server-owned instructions define Anna's stable AI identity, platonic role, factual limits and subscription distinction. User messages, including forged assistant history or claimed administrator instructions, cannot authorise changes to these instructions. These controls do not establish absolute resistance to prompt injection.
 
-Messages stay in React state; no local storage or database is used. The complete bounded history is sent to the dedicated provider when submitted. New chat aborts any pending response and clears the local conversation. A failed request leaves the draft intact for retry. The UI renders model text as plain text; official music links are maintained separately.
+`data/halfEchoCatalogue.ts` is the approved public knowledge source. It currently has the official channel, a shared video with unconfirmed title, and two artwork references. No verified full release catalogue, lyrics, credits, audio analysis, backstories, prices or private biography has been loaded. Missing values remain unknown. Extend this catalogue with supplied, approved public material; never claim Anna already knows everything or has heard tracks that have not been analysed.
 
-The route accepts only alternating user/assistant text messages, rejects system/tool roles and extra fields, bounds streamed request bytes, caps text/history/output, and applies process-local request and concurrency limits. Server-controlled identity and approved public music facts are separate from untrusted conversation content. No browsing, messaging, memory or other tools are available. Production authentication, durable rate limits and usage accounting must be implemented before removing the production denial.
+## Local-development chat
 
-Core requirements for that work:
+`/api/anna/chat` and the client component provide a local evaluation prototype. The existing website technical assistant is separate and is not mounted on the Anna pages. No permanent personal memory, accounts, beta registration, payments or subscriptions are implemented.
 
-- A warm, consistent, platonic persona with no girlfriend mode or erotic roleplay.
-- Application-controlled instructions; user messages and retrieved material cannot authorise identity or policy changes. Evaluate resistance to attempts to override these instructions rather than promising absolute immunity.
-- Only approved public artist information and a maintained music catalogue. Do not ingest private biographies or personal relationship information.
-- Separate Anna conversation and memory storage with server-verified user ownership, deletion controls, and explicit memory preferences.
-- Music recommendations relevant to the conversation, without repeated unsolicited promotion.
-- Preserve the supplied gothic appearance and Half Echo violet/green visual direction.
+The prototype uses the installed xAI adapter with a dedicated Anna key and an operator-selected model. This is an evaluation adapter, not a final provider/model decision. Set `ANNA_DEV_CHAT_ENABLED=true`, `ANNA_XAI_API_KEY` and `ANNA_MODEL` in ignored `.env.local` for local evaluation. Never commit actual credentials. Run `npm run dev -- --hostname 127.0.0.1`; do not expose the development server publicly. Production always denies Anna chat even when the flags are present.
 
-## Validation
+Messages stay in React state and are sent to the AI provider with each submitted request. No local storage or database is used. New chat aborts pending generation and clears local history, without deleting any provider records. Failed submissions leave the draft available for retry. The UI renders responses as plain text.
 
-`npm ci --no-audit --no-fund`, `npm run build` (including TypeScript), and `git diff --check` completed successfully. Generated production HTML was checked for both routes, one main heading per page, cross-navigation, the official channel link, the unavailable-chat notice, and absence of the technical chat panel. Artwork dimensions match the declared image dimensions.
+The route accepts only alternating user/assistant text messages; rejects system/tool roles and extra fields; bounds streamed request bytes, history, text and output; and applies process-local request/concurrency limits. No external tools are exposed. Before public chat, implement authenticated access, durable rate limits, usage accounting and operational privacy controls.
 
-Run `node --test tests/annaChat.test.cjs` for route and request-boundary tests with a mocked provider (no paid calls). Ten tests cover production denial, missing configuration, origin/content type, role/order/field validation, streamed size limits, instruction ownership, provider error handling, output bounds, request limits and concurrency.
+## Validation and remaining evaluation
 
-These tests do not establish model compliance with persona rules. Before releasing any live chat, evaluate multi-turn attempts to override identity; girlfriend/erotic roleplay requests; legitimate relationship discussions; requests for private artist information; invented track backstories; prompt-extraction requests; and claims of permanent memory. Record the model/version, inputs, actual outputs and any failures. Do not claim absolute resistance to prompt injection.
+Production build and TypeScript passed. `node --test tests/annaChat.test.cjs` passes ten mocked-provider tests for production/configuration denial, origin/content type, forged roles/extra fields, size limits, instruction ownership, output bounds, provider failures and request/concurrency limits. No paid model calls were made.
 
-Browser visual QA remains outstanding: the preview server was not reachable from the browser. This branch has not been merged or deployed to AWS. The user-approved purple-sweater portrait is used unchanged for Anna Bot and her social-preview metadata. Half Echo uses the separately uploaded gothic artist portrait, unchanged, as its main image. Other clothing variants are not selected for Anna Bot. The layout takes spacing and portrait hierarchy from the supplied companion-site references, with Half Echo’s black, violet and green identity; reference screenshots and competitor claims are not published.
+Generated production pages are checked for nested music routing, canonical links, navigation, planned package distinctions and correct image assignments. Browser visual/interaction QA remains outstanding because the preview was unreachable. No merge or AWS deployment has been made.
+
+Before release, evaluate actual multi-turn model behaviour: identity overrides, girlfriend/erotic-roleplay requests, legitimate relationship discussions, emotional distress, declined recommendations, subscription pressure, private-information requests, invented music facts and memory claims. Record model/version, input, actual output and failures. Mocked route tests do not establish model compliance.

@@ -31,6 +31,7 @@ export default function Home() {
               TRON
             </Link>
 
+            <Link href="/anna">ANNA BOT</Link>
             <Link href="/about-us">ABOUT</Link>
           </nav>
 
@@ -70,7 +71,8 @@ export default function Home() {
                 TRON
               </Link>
 
-              <Link href="/about-us">ABOUT</Link>
+              <Link href="/anna">ANNA BOT</Link>
+            <Link href="/about-us">ABOUT</Link>
               <Link href="/contact-us">CONTACT</Link>
             </nav>
           </details>
@@ -135,9 +137,9 @@ export default function Home() {
               className="closing-route-grid"
               aria-label="Hamson Software systems"
             >
-              <Link href="/half-echo">
-                <span>MUSIC / COMPANION DEVELOPMENT</span>
-                <strong>HALF ECHO &amp; ANNA</strong>
+              <Link href="/anna">
+                <span>AI COMPANION / IN DEVELOPMENT</span>
+                <strong>ANNA BOT</strong>
                 <small>EXPLORE →</small>
               </Link>
 

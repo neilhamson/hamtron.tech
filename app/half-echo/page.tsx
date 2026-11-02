@@ -6,9 +6,9 @@ import styles from "./echo.module.css";
 
 export const metadata: Metadata = {
   title: { absolute: "Half Echo | Electronic Music" },
-  description: "Explore Half Echo, the HAMTRON music project: dark melodic techno and cyberpunk soundscapes.",
-  alternates: { canonical: "/half-echo" },
-  openGraph: { title: "Half Echo", description: "Dark melodic techno. Cyberpunk soundscapes.", url: "/half-echo", type: "website", images: [{ url: "/half-echo/artist.png" }] },
+  description: "Explore Half Echo, the separate music enterprise featured in Anna Bot: dark melodic techno and cyberpunk soundscapes.",
+  alternates: { canonical: "/anna/half-echo" },
+  openGraph: { title: "Half Echo", description: "Dark melodic techno. Cyberpunk soundscapes.", url: "/anna/half-echo", type: "website", images: [{ url: "/half-echo/artist.png" }] },
 };
 
 export default function HalfEchoPage() {
@@ -30,7 +30,7 @@ export default function HalfEchoPage() {
       </div>
     </section>
     <section className={styles.section} aria-labelledby="anna-intro-title">
-      <p className={styles.kicker}>Also from HAMTRON</p><h2 className={styles.heading} id="anna-intro-title">Discover Anna Bot.</h2><p>Anna Bot is a separate AI companion product in development under the same HAMTRON umbrella. Half Echo is the music project; Anna Bot is the place for friendly, platonic conversation.</p><div className={styles.actions}><Link className={styles.secondary} href="/anna">Meet Anna Bot →</Link></div>
+      <p className={styles.kicker}>The companion &amp; music package</p><h2 className={styles.heading} id="anna-intro-title">Discover Anna Bot.</h2><p>Anna Bot is HamTron’s companion software. Half Echo is a separate music enterprise. Choose Anna Bot alone, or the planned complete subscription that adds the Half Echo music package.</p><div className={styles.actions}><Link className={styles.secondary} href="/anna">Meet Anna Bot →</Link><Link className={styles.secondary} href="/anna/plans">Compare the packages →</Link></div>
     </section>
   </EchoShell>;
 }
