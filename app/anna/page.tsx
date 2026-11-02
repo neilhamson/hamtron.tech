@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import EchoShell from "../half-echo/EchoShell";
 import styles from "../half-echo/echo.module.css";
+import AnnaChat from "./AnnaChat";
+import { annaChatConfigured } from "../../lib/anna/access.server";
 
 export const metadata: Metadata = {
   title: { absolute: "Anna by Half Echo | AI Companion in Development" },
@@ -12,15 +14,17 @@ export const metadata: Metadata = {
 };
 
 export default function AnnaPage() {
+  const chatAvailable = annaChatConfigured();
   return <EchoShell active="anna">
     <section className={styles.hero} aria-labelledby="anna-title">
       <div><p className={styles.kicker}>Anna by Half Echo / AI companion</p><h1 className={styles.title} id="anna-title">Good company.<br /><em>Shared frequencies.</em></h1>
         <p className={styles.lead}>A companion to talk music with. A friendly voice for everyday life. Anna is being developed for thoughtful, open conversation with a personality rooted in the world of Half Echo.</p>
-        <span className={styles.status}>In development · Chat not yet available</span>
-        <div className={styles.actions}><a className={styles.button} href="#development">Follow the development ↓</a><Link className={styles.secondary} href="/half-echo">Explore the music →</Link></div>
+        <span className={styles.status}>{chatAvailable ? "Development chat preview" : "In development · Chat not yet available"}</span>
+        <div className={styles.actions}><a className={styles.button} href="#anna-chat">Explore Anna’s chat ↓</a><Link className={styles.secondary} href="/half-echo">Explore the music →</Link></div>
       </div>
       <figure className={styles.portrait}><Image src="/half-echo/anna-logo.png" alt="Anna of Half Echo, with dark hair, gothic styling, and violet and blue lighting" width={600} height={596} sizes="(max-width: 760px) 100vw, 50vw" priority /><figcaption>ANNA / HALF ECHO</figcaption></figure>
     </section>
+    <AnnaChat available={chatAvailable} />
     <section className={styles.section} aria-labelledby="character-title"><p className={styles.kicker}>Her character</p><h2 className={styles.heading} id="character-title">Warm. Curious. Her own personality.</h2>
       <div className={styles.grid}>
         <article className={styles.card}><h3>A friend to talk things through</h3><p>The planned experience includes interests, creative ideas, everyday conversation, and a thoughtful sounding board for relationships. Anna will be clearly identified as AI, with a consistently platonic role.</p></article>

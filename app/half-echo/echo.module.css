@@ -37,3 +37,20 @@
 .portrait { margin: 0; min-width: 0; background: radial-gradient(ellipse at 50% 65%, #6b33962b, transparent 70%); }
 .portrait img { display: block; width: 100%; height: auto; object-fit: contain; }
 .portrait figcaption { margin-top: 14px; color: #bdb1c9; font-size: 12px; letter-spacing: .06em; text-align: center; }
+.chat { padding: clamp(18px, 4vw, 32px); border: 1px solid #ffffff26; background: #17121f; border-radius: 5px; }
+.chatNote { margin: 0 0 24px; font-size: 13px; color: #bdb1c9; line-height: 1.6; max-width: 850px; }
+.chatMessages { max-height: 440px; overflow-y: auto; padding: 4px; }
+.chatWelcome { color: #dfc4ff; font-size: 21px; line-height: 1.6; }
+.chatMessage { margin: 0 0 16px; padding: 18px; background: #09080e; border-left: 2px solid #d1a2ff; }
+.chatMessage[data-speaker="user"] { border-color: #a7f7c1; }
+.chatMessage strong { font-size: 13px; color: #d1a2ff; }
+.chatMessage[data-speaker="user"] strong { color: #a7f7c1; }
+.chatMessage p { white-space: pre-wrap; overflow-wrap: anywhere; margin: 8px 0 0; line-height: 1.6; }
+.chatForm { display: grid; gap: 12px; margin-top: 26px; }
+.chatForm textarea { width: 100%; min-height: 100px; padding: 14px; resize: vertical; background: #09080e; border: 1px solid #b894d680; color: #f8f3ff; border-radius: 3px; font: inherit; line-height: 1.6; }
+.chatControls { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.chatControls small { color: #bdb1c9; margin-right: auto; }
+.chat button { font: inherit; cursor: pointer; }
+.chat .secondary { background: transparent; color: #f8f3ff; }
+.chat button:disabled { opacity: .5; cursor: default; }
+.chatError { color: #ffc8cc; line-height: 1.6; }
