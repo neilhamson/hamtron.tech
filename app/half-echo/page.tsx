@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import EchoShell from "./EchoShell";
 import styles from "./echo.module.css";
+import AudioPreview from "./AudioPreview";
+import { halfEchoPreviewAvailable } from "../../lib/halfEchoPreview.server";
 
 export const metadata: Metadata = {
   title: { absolute: "Half Echo | Electronic Music" },
@@ -24,6 +26,8 @@ export default function HalfEchoPage() {
     </section>
     <section className={styles.section} id="explore-music" aria-labelledby="explore-title">
       <p className={styles.kicker}>Enter the world</p><h2 className={styles.heading} id="explore-title">Find your next frequency.</h2>
+      <AudioPreview available={halfEchoPreviewAvailable()} />
+      <div className={styles.audioSpacer} />
       <div className={styles.grid}>
         <article className={styles.card}><h3>The Half Echo channel</h3><p>Explore the music, videos, and visual world on the official YouTube channel.</p><a href="https://www.youtube.com/@HalfechoYT" target="_blank" rel="noopener noreferrer">Visit the official channel ↗</a></article>
         <article className={styles.card}><h3>Press play</h3><p>Open the video shared for this project on YouTube. Playback stays under your control.</p><a href="https://www.youtube.com/watch?v=0ymKxVIhTgY" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></article>

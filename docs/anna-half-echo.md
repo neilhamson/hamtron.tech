@@ -41,3 +41,13 @@ Production build and TypeScript passed. `node --test tests/annaChat.test.cjs` pa
 Generated production pages are checked for nested music routing, canonical links, navigation, planned package distinctions and correct image assignments. Browser visual/interaction QA remains outstanding because the preview was unreachable. No merge or AWS deployment has been made.
 
 Before release, evaluate actual multi-turn model behaviour: identity overrides, girlfriend/erotic-roleplay requests, legitimate relationship discussions, emotional distress, declined recommendations, subscription pressure, private-information requests, invented music facts and memory claims. Record model/version, input, actual output and failures. Mocked route tests do not establish model compliance.
+
+## No Respawn local audio preview
+
+The supplied `No Respawn.wav` contains audio only: 261.6 seconds, stereo 48 kHz, 16-bit PCM, 50,241,040 bytes. Its filename supplies the track title; no release date, lyrics, credits, story, video mapping or musical analysis is inferred. The original master is unchanged.
+
+A separate 192 kb/s MP3 web copy is 6,279,640 bytes (261.624 seconds including encoding padding). It is saved separately for the owner. Neither WAV nor MP3 is committed to the public repository. `.local-media/` is ignored.
+
+For local evaluation, place the web copy at `.local-media/No_Respawn_Web.mp3`, set `HALF_ECHO_LOCAL_PREVIEW=true` in ignored `.env.local` and run the development server on loopback. The native audio player uses controls, `preload="none"` and no autoplay. The fixed-path preview route serves MP3 only in development and denies production even with the flag present. Missing/disabled media displays an honest unavailable state. This local preview reads the small MP3 as a whole; it is not a production streaming or byte-range implementation.
+
+Four mocked-file tests in `tests/halfEchoPreview.test.cjs` cover production denial, disabled/missing files, fixed-path content/headers and generic filesystem errors. Production build/TypeScript passed after regenerating a faulty build cache. Actual browser playback remains unverified. AWS delivery, byte-range streaming or adaptive media, and subscription entitlement checks still need implementation. Original music video footage is still needed for video playback.

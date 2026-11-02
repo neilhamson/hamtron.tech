@@ -11,6 +11,9 @@ export const halfEchoCatalogue = {
     { title: "The Doors Were Never Locked", source: "Supplied artwork", releaseDate: null, lyrics: null, backstory: null },
   ],
   releases: [],
+  suppliedTracks: [
+    { title: "No Respawn", titleSource: "Uploaded filename: No Respawn.wav", status: "Source audio supplied; release details unconfirmed", durationSeconds: 261.6, sourceFormat: "WAV, 48 kHz, 16-bit stereo PCM", lyrics: null, credits: null, releaseDate: null, backstory: null, videoUrl: null, audioAnalysis: null },
+  ],
   otherOfficialSocials: [],
   completeness: "Partial. Full release catalogue, audio analysis, lyrics, credits, release dates, public background and creative stories have not been supplied or verified. Artwork references are not verified release records. The shared video is not mapped to an artwork title.",
 } as const;

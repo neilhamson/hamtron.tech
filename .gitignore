@@ -52,6 +52,7 @@ next-env.d.ts
 *.pfx
 
 # local backups and deployment archives
+/.local-media/
 *.bak
 *.backup
 *.old
