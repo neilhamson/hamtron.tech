@@ -56,7 +56,7 @@ export default function AnnaChat({ available }: { available: boolean }) {
     {!available ? <div className={styles.card}><h3>Chat is taking shape.</h3><p>Anna is in development. Her public chat is not available yet. In the meantime, explore the music that gives her world its character.</p><a href="https://www.youtube.com/@HalfechoYT" target="_blank" rel="noopener noreferrer">Explore Half Echo on YouTube ↗</a></div> : <div className={styles.chat}>
       <p className={styles.chatNote}>Development preview · AI responses can be mistaken. This chat stays in this tab’s memory and is sent to the AI provider when you submit. No permanent memory is implemented. New chat clears the conversation here; it does not delete provider records.</p>
       <div className={styles.chatMessages} role="log" aria-label="Conversation with Anna" aria-live="polite" aria-relevant="additions" aria-busy={busy}>
-        {!messages.length && <p className={styles.chatWelcome}>Hi, I’m Anna, Half Echo’s AI companion. We can talk music, ideas, or whatever kind of day you’re having.</p>}
+        {!messages.length && <p className={styles.chatWelcome}>Hi, I’m Anna, an AI companion from HAMTRON. We can talk music, ideas, or whatever kind of day you’re having.</p>}
         {messages.map((message, index) => <div className={styles.chatMessage} data-speaker={message.role} key={index}><strong>{message.role === "user" ? "You" : "Anna"}</strong><p>{message.content}</p></div>)}
         <div ref={end} />
       </div>

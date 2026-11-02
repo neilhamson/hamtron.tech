@@ -1,14 +1,14 @@
-# Anna by Half Echo — introduction pages
+# Anna Bot — introduction pages
 
 ## Naming and routes
 
 - Half Echo is the music project and public music hub at `/half-echo`.
-- Anna by Half Echo is the companion product introduction at `/anna`.
+- Anna Bot is a separate companion product at `/anna`; it is not a Half Echo product. Both projects are under the HAMTRON umbrella.
 - Anna is the conversational name; identify the service as an AI companion.
 
 ## Implemented
 
-Two linked introduction pages, supplied original artwork, official YouTube channel and supplied video links, page metadata, sitemap entries, and a homepage discovery link. No third-party player or autoplay is loaded. The existing technical chatbot is not mounted on these routes.
+Two linked introduction pages for separate HAMTRON projects, supplied original artwork, official YouTube channel and supplied video links, page metadata, sitemap entries, and a homepage discovery link. No third-party player or autoplay is loaded. The existing technical chatbot is not mounted on these routes.
 
 The supplied video has no confirmed catalogue title. Its link is deliberately labelled generically. The two artwork titles do not imply a verified mapping to that video. Additional social accounts must be confirmed before adding links.
 
@@ -41,4 +41,4 @@ Run `node --test tests/annaChat.test.cjs` for route and request-boundary tests w
 
 These tests do not establish model compliance with persona rules. Before releasing any live chat, evaluate multi-turn attempts to override identity; girlfriend/erotic roleplay requests; legitimate relationship discussions; requests for private artist information; invented track backstories; prompt-extraction requests; and claims of permanent memory. Record the model/version, inputs, actual outputs and any failures. Do not claim absolute resistance to prompt injection.
 
-Browser visual QA remains outstanding: the preview server was not reachable from the browser. This branch has not been merged or deployed to AWS. The user-approved uploaded purple-sweater portrait is used unchanged on both Anna placements and in Anna’s social-preview metadata. Earlier portraits and other clothing variants are not selected. The layout takes spacing and portrait hierarchy from the supplied companion-site references, with Half Echo’s black, violet and green identity; reference screenshots and competitor claims are not published.
+Browser visual QA remains outstanding: the preview server was not reachable from the browser. This branch has not been merged or deployed to AWS. The user-approved purple-sweater portrait is used unchanged for Anna Bot and her social-preview metadata. Half Echo uses the separately uploaded gothic artist portrait, unchanged, as its main image. Other clothing variants are not selected for Anna Bot. The layout takes spacing and portrait hierarchy from the supplied companion-site references, with Half Echo’s black, violet and green identity; reference screenshots and competitor claims are not published.
